@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLO Electronics - Assistência Técnica</title>
+    <!--<link rel="stylesheet" href="css/estilo.css">*/-->
 
     <!-- Link Oficial Completo para os Ícones do FontAwesome -->
     <link rel="stylesheet" href="https://cloudflare.com"
@@ -344,16 +345,28 @@
             line-height: 1.8;
         }
 
-        .btn-voltar {
-            color: var(--azul-destaque);
+        /* Botão Voltar ao Topo */
+        .voltar-topo {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+
+            background-color: #123b66;
+            color: white;
+
+            border: 1px solid #168cff;
+            border-radius: 8px;
+
             text-decoration: none;
             font-weight: bold;
-            font-size: 14px;
-            transition: opacity 0.3s;
+
+            transition: all 0.3s ease;
         }
 
-        .btn-voltar:hover {
-            opacity: 0.8;
+        .voltar-topo:hover {
+            background-color: #168cff;
+            color: white;
+            transform: translateY(-3px);
         }
 
         /* Responsividade Celular */
@@ -377,15 +390,15 @@
 
 <body>
 
-    <header>
+    <header id="inicio">
         <div class="logo">
             <img src="imagens/Site__logo.png" alt="MLO Electronics" height="100">
         </div>
         <nav>
-            <a href="#">Início</a>
+            <a href="#Início">Inicio</a>
             <a href="#servicos">Serviços</a>
             <a href="#sobre">Sobre</a>
-            <a href="#">Contato</a>
+            <a href="#Contato">Contato</a>
         </nav>
     </header>
 
@@ -419,8 +432,8 @@
                     <p>Manutenção especializada em eletrodomésticos nacionais e importados.
                     </p>
                 </div>
-
             </div>
+            <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
         </section>
         <!-- Seção Sobre Nós -->
         <section id="sobre" class="sobre">
@@ -436,6 +449,8 @@
                         restauração minuciosa de eletrônicos vintage.</p>
                     <p>Nosso foco está na transparência, na qualidade dos componentes utilizados e na garantia de um
                         serviço que devolve a vida e a máxima performance ao seu equipamento.</p>
+                    <!-- Exemplo dentro da seção Sobre ou no final da página -->
+                    <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
                 </div>
 
                 <div class="sobre-imagem">
