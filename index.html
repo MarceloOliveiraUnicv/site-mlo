@@ -1,36 +1,44 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MLO Electronics - Assistência Técnica</title>
-    <!--<link rel="stylesheet" href="css/estilo.css">*/-->
 
-    <!-- Link Oficial Completo para os Ícones do FontAwesome -->
-    <link rel="stylesheet" href="https://cloudflare.com"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    ```
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <!-- Linha que adiciona o logotipo na aba do navegador (Favicon) -->
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="imagens/logo.png">
-
 
     <style>
         /* Variáveis de Cores baseadas no seu Sistema */
         :root {
             --bg-principal: hsl(216, 69%, 10%);
             /* Azul escuro do seu menu lateral */
+
             --bg-card: #ffffff;
             /* Branco dos cards do dashboard */
+
             --texto-claro: #f4f6f9;
             /* Texto legível sobre fundo escuro */
+
             --texto-escuro: #2b3a4a;
             /* Texto para os cards brancos */
+
             --azul-destaque: #007bff;
-            /* Azul do botão "Nova ordem de serviço" */
+            /* Azul do sistema */
+
+            --azul-e-mail: #007bff;
+            /* Azul do botão de e-mail */
+
             --laranja-vintage: #ff9800;
-            /* Laranja do botão "Ver orçamentos" */
+            /* Laranja do sistema */
+
             --verde-whatsapp: #25d366;
             /* Verde padrão do WhatsApp */
         }
@@ -53,7 +61,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
+            padding: 8px 8%;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
@@ -101,6 +109,15 @@
             max-width: 600px;
         }
 
+        /* Container dos botões de contato */
+        .botoes-contato {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
         /* Botão do WhatsApp */
         .btn-whatsapp {
             background-color: var(--verde-whatsapp);
@@ -120,6 +137,27 @@
         .btn-whatsapp:hover {
             transform: translateY(-2px);
             background-color: #20ba5a;
+        }
+
+        /* Botão do E-mail */
+        .btn-e-mail {
+            background-color: var(--azul-e-mail);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.30);
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn-e-mail:hover {
+            transform: translateY(-2px);
+            background-color: #0056b3;
         }
 
         /* Seção de Serviços */
@@ -150,7 +188,7 @@
             flex-wrap: wrap;
         }
 
-        /* Estilo dos Cards simulando os blocos do Dashboard */
+        /* Estilo dos Cards */
         .card {
             background-color: var(--bg-card);
             color: var(--texto-escuro);
@@ -166,7 +204,7 @@
             transform: translateY(-5px);
         }
 
-        /* Bordas superiores coloridas iguais às do seu sistema */
+        /* Bordas superiores coloridas */
         .card.azul {
             border-top: 5px solid var(--azul-destaque);
         }
@@ -196,16 +234,6 @@
         .card p {
             font-size: 15px;
             color: #556575;
-        }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            padding: 30px;
-            margin-top: 40px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.5);
         }
 
         /* Seção Sobre Nós */
@@ -252,7 +280,6 @@
             text-align: center;
         }
 
-        /* Ajuste do tamanho da sua foto local */
         .sobre-imagem img {
             max-width: 100%;
             max-height: 380px;
@@ -350,16 +377,12 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-
             background-color: #123b66;
             color: white;
-
             border: 1px solid #168cff;
             border-radius: 8px;
-
             text-decoration: none;
             font-weight: bold;
-
             transition: all 0.3s ease;
         }
 
@@ -383,88 +406,154 @@
             .contato-container {
                 flex-direction: column;
             }
+
+            .botoes-contato {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn-whatsapp,
+            .btn-e-mail {
+                width: 100%;
+                max-width: 320px;
+                justify-content: center;
+            }
         }
-    </style> <!-- Essa tag fecha o bloco inteiro de estilos -->
+    </style>
+    ```
 
 </head>
 
 <body>
 
+    ```
     <header id="inicio">
         <div class="logo">
-            <img src="imagens/Site__logo.png" alt="MLO Electronics" height="100">
+            <img src="imagens/Site__logo.jpeg" alt="MLO Electronics" height="140">
         </div>
+
         <nav>
-            <a href="#Início">Inicio</a>
+            <a href="#inicio">Início</a>
             <a href="#servicos">Serviços</a>
             <a href="#sobre">Sobre</a>
-            <a href="#Contato">Contato</a>
+            <a href="#contato">Contato</a>
         </nav>
     </header>
 
     <main>
+
         <section class="hero">
             <h1>Manutenção em Placas e Circuitos Eletrônicos</h1>
-            <p>Diagnóstico preciso e soluções técnicas avançadas para os seus equipamentos com a confiança que você
-                procura.</p>
-            <!-- Substitua o link abaixo pelo link real do seu WhatsApp -->
-            <a href="https://wa.me/5541988389132" class="btn-whatsapp" target="_blank">
-                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-            </a>
+
+            <p>
+                Diagnóstico preciso e soluções técnicas avançadas para os seus equipamentos
+                com a confiança que você procura.
+            </p>
+
+            <div class="botoes-contato">
+
+                <a href="https://wa.me/5541988389132" class="btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                    Falar no WhatsApp
+                </a>
+
+                <a href="mailto:contato@mloelectronicsbrasil.com.br" class="btn-e-mail">
+                    <i class="fas fa-envelope"></i>
+                    Contato por e-mail
+                </a>
+
+            </div>
         </section>
 
         <section id="servicos" class="servicos">
+
             <h2>Nossos Serviços</h2>
+
             <div class="container-cards">
 
-                <!-- Card 1: Conserto Geral (Borda Azul do Sistema) -->
+                <!-- Card 1 -->
                 <div class="card azul">
                     <i class="fas fa-microchip"></i>
+
                     <h3>Conserto de Equipamentos</h3>
-                    <p>Diagnóstico completo e reparo avançado em placas, circuitos e componentes eletrônicos modernos.
+
+                    <p>
+                        Diagnóstico completo e reparo avançado em placas,
+                        circuitos e componentes eletrônicos modernos.
                     </p>
                 </div>
 
-                <!-- Card 2: Vintage (Borda Laranja do Sistema) -->
+                <!-- Card 2 -->
                 <div class="card laranja">
                     <i class="fas fa-radio"></i>
+
                     <h3>Conserto de Eletrodomésticos</h3>
-                    <p>Manutenção especializada em eletrodomésticos nacionais e importados.
+
+                    <p>
+                        Manutenção especializada em eletrodomésticos
+                        nacionais e importados.
                     </p>
                 </div>
+
             </div>
-            <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
+
+            <a href="#inicio" class="voltar-topo">
+                ↑ Voltar ao topo
+            </a>
+
         </section>
+
         <!-- Seção Sobre Nós -->
         <section id="sobre" class="sobre">
+
             <div class="sobre-container">
 
                 <div class="sobre-conteudo">
-                    <h2>Sobre a MLO Electronics</h2>
-                    <p>Nascemos da paixão pela engenharia eletrônica e do compromisso em oferecer soluções técnicas de
-                        alta precisão. Na <strong>MLO Electronics</strong>, entendemos que cada equipamento possui uma
-                        história e um valor único para nossos clientes.</p>
-                    <p>Unimos tecnologia de bancada moderna a um profundo conhecimento em circuitos clássicos. É isso
-                        que nos torna especialistas tanto no reparo avançado de placas de última geração quanto na
-                        restauração minuciosa de eletrônicos vintage.</p>
-                    <p>Nosso foco está na transparência, na qualidade dos componentes utilizados e na garantia de um
-                        serviço que devolve a vida e a máxima performance ao seu equipamento.</p>
-                    <!-- Exemplo dentro da seção Sobre ou no final da página -->
-                    <a href="#inicio" class="voltar-topo">↑ Voltar ao topo</a>
+
+                    <h2>Sobre a MLO Electronics Brasil</h2>
+
+                    <p>
+                        Nascemos da paixão pela engenharia eletrônica e do compromisso
+                        em oferecer soluções técnicas de alta precisão. Na
+                        <strong>MLO Electronics Brasil</strong>, entendemos que cada equipamento
+                        possui uma história e um valor único para nossos clientes.
+                    </p>
+
+                    <p>
+                        Unimos tecnologia de bancada moderna a um profundo conhecimento
+                        em circuitos clássicos. É isso que nos torna especialistas tanto
+                        no reparo avançado de placas de última geração quanto na
+                        restauração minuciosa de eletrônicos vintage.
+                    </p>
+
+                    <p>
+                        Nosso foco está na transparência, na qualidade dos componentes
+                        utilizados e na garantia de um serviço que devolve a vida e a
+                        máxima performance ao seu equipamento.
+                    </p>
+
+                    <a href="#inicio" class="voltar-topo">
+                        ↑ Voltar ao topo
+                    </a>
+
                 </div>
 
                 <div class="sobre-imagem">
-                    <!-- Imagem corrigida de um circuito eletrônico profissional -->
-                    <img src="imagens/Bancada4.png" alt="Bancada Técnica MLO Electronics">
+
+                    <img src="imagens/Bancada4.png" alt="Bancada Técnica MLO Electronics Brasil">
+
                 </div>
 
             </div>
+
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 MLO Electronics - Todos os direitos reservados.</p>
+        <p>&copy; 2026 MLO Electronics Brasil - Todos os direitos reservados.</p>
     </footer>
+    ```
 
 </body>
 
